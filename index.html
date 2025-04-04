@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Stylish Page</title>
+  <title>ePortfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,6 +18,7 @@
       
       <div class="list-item">
         <h2>CS-499 Code Review</h2>
+        <img src="images/CodeRevpng.png" alt="" width="800" height="550">
         <p>This code review was conducted as part of my capstone project for my Computer Science degree.</p>
         <form action="https://youtu.be/7aRa1gKVARk">
             <input type="submit" value="Go to the code review"/>
@@ -26,7 +27,31 @@
 
       <div class="list-item">
         <h2>Shaper3D</h2>
-        <p>Shaper3D is a C++ model viewing application that uses the OpenGL graphics API and the ImGui.</p>
+        <img src="images/Shaper3D.png" alt="" width="800" height="550">
+        <p>
+          The first artifact I enhanced from my courses is a desktop application that uses the OpenGL graphics API and the C++ programming language to render a 3D scene containing primitive shapes like cylinders, cubes, and pyramids in a GLFW window. The user can navigate the scene using the WASD keys together with the mouse to translate and pan the camera. The meshes in the scene are also textured using images and materials that define their lighting properties. This 3D application was the final project in the course CS-330 Computational Graphics and Visualization. I haved called the enhanced version of the 3d application Shaper3D.
+        </p>
+        <p>
+          I chose this artifact to include in my ePortfolio for several reasons. Firstly, my specialization within computer science and software engineering is C++ programming, and one of the main uses for C++ in the field is graphics programming and game development. As such, I believe having an artifact in my portfolio that demonstrates skills in these areas could help when applying to these types of jobs. For instance, many companies in the industry have built their applications on the OpenGL graphics API, and writing a full 3d application from scratch that uses this API demonstrates my understanding of the technology and 3d graphics in general.  
+        </p>
+        <p>
+          Similarly, because it is entirely written in C++, the 3D scene application also provides examples of my knowledge and skill with language and techniques like object-oriented programming and C++ best practices. I also chose this artifact because it provides a good platform for enhancement. In its initial state, all the application was capable of was rendering a simple 3d scene. However, now, with the enhancements in place, it is much more similar to a typical 3d model viewer with a styled user interface (UI) and controls for the different mesh objects in the scene. Adding these elements to the program allowed me to demonstrate my skills in designing and implementing new features within an existing codebase, which is one of the core skills required in the industry.   
+        </p>
+        <p>
+          The enhancement plan for the 3d application was to add a UI using the ImGui framework. ImGui is the most popular UI framework for C++ applications and is used in many game engines and 3d modeling/CAD software because of its cross-platform support and excellent capabilities. Thus, my goal for the enhancement was to add a custom-styled ImGui UI that would allow me to log into the application and manipulate 3d meshes and their properties. This task required careful planning and design as integrating an immediate-mode UI like ImGui into an application requires fundamental changes to the app's rendering flow and user input processing.   
+        </p>
+        <p>
+          From the outset, I had to decide how to integrate the ImGui framework into the application. ImGui is generally built into a static library and linked to the project. However, the original application project was only set up for the Visual Studio IDE, which limits the cross-platform compatibility of the project. Thus, I made the decision to refactor the project to use CMake as the build system. With CMake, adding the ImGui framework or any other external libraries and building them either as static or dynamic libraries is trivial and cross-platform compatible, unlike using Visual Studio. While I have worked with CMake in the past, setting up this project's build system was the most complex CMake project I have done yet, and I learned a great deal about how this industry standard tool works and what the best practices are for creating clean cross-platform build systems.
+        </p>
+        <p>
+          With the build system configured and ImGui integrated, I then began the process of creating the various ImGui windows I would need for the application UI. During this process, I learned much more about the ImGui framework, including how to use custom colors, styles, and fonts in different parts of the application. While I have used ImGui extensively in the past, I have never changed the styles or colors from the defaults provided in the ImGui context. I also learned how to implement the model-view-controller design pattern in C++ while implementing the various login and mesh views in the UI. Implementing this design pattern in C++ was somewhat different from my previous experience with the pattern in typescript. I also gained experience with manipulating the position of ImGui widgets by calculating window sizes and positioning the cursor prior to drawing. This was also a new skill to me, as my previous work with ImGui had not altered the default alignment or size of the widgets.
+        </p>
+        <p>
+          One challenge that arose during the enhancement was how to separate the ImGui core rendering methods from the frontend ImGui code contained in the view class. Initially, I was passing a function pointer to the view function to the backend for rendering. However, this complicated the process of passing parameters to the view functions like mesh objects. Thus, I had to refactor the ImGui rendering backend class to split the rendering process into two stages: the first stage prepares the context and dock space for the draw call, and the second stage actually calls the ImGui render function. This rendering flow allows the frontend ImGui code to be contained within the view class and called between the two backend rendering functions, completely decoupling the rendering of an ImGui window from its implementation.
+        </p>
+        <p>
+          Overall, I have been successful in meeting all of the course outcomes I initially identified in the module one enhancement plan. I have implemented strategies for supporting users and diverse audiences by adding a high-value feature, in this case, an ImGui UI, to the application that enhances the user experience. I have also demonstrated the ability to use industry-standard tools and techniques like CMake, ImGui, and object-oriented programming. I have also created professional quality visual and written communication in the form of comments within the source code, diagrams including UML and flowcharts, and this narrative of the enhancement. I have also developed a security mindset by architecting the UI for security by utilizing the model-view-controller design pattern to separate database interactions from user input. Therefore, I have met the outcomes I wanted to meet with this enhancement and have no revisions to the enhancement plan in this regard.
+        </p>
         <form action="https://github.com/mwshaner/Shaper3D">
             <input type="submit" value="Go to Shaper3D"/>
         </form>
