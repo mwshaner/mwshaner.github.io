@@ -1,12 +1,14 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+  background: linear-gradient(270deg, #2c3e50, #6e90b3, #5e6771, #bdc3c7);
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
-  min-height: 100vh; 
+  align-items: flex-start;
+  min-height: 100vh;
   color: #333;
 }
 
@@ -136,7 +138,6 @@ img {
   }
 }
 
-/* The animated background container */
 .header-wrapper {
   position: relative;
   display: flex;
@@ -148,7 +149,6 @@ img {
   margin-top: 2rem;
 }
 
-/* Create the animated gradient background as a pseudo-element */
 .header-wrapper::before {
   content: '';
   position: absolute;
@@ -160,7 +160,6 @@ img {
   filter: blur(10px);
 }
 
-/* Make sure the text is above the animation and crisp */
 .animated-header {
   position: relative;
   z-index: 1;
