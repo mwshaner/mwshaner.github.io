@@ -104,6 +104,7 @@ nav .right a span {
 
 .about-me .text {
     flex: 5;
+    font-size: 18px;
 }
 
 .about-me .text h2 {
@@ -159,6 +160,7 @@ nav .right a span {
 }
 
 .skills .text {
+    font-size: 18px;
     display: flex;
     flex-direction: column; /* Stack text and button vertically */
     align-items: flex-start; /* Align text to the left */
@@ -235,6 +237,7 @@ nav .right a span {
 }
 
 .projects .list-item p {
+    font-size: 18px;
     text-align: left;
     display: block;
     margin-bottom: 30px;
