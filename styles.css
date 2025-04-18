@@ -247,6 +247,10 @@ nav .right a span {
     display: none;
 }
 
+.projects .list-item img.hidden-content {
+    display: none;
+}
+
 .projects .list-item img {
     width: 550px;
     height: 550px;
